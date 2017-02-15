@@ -18,7 +18,13 @@
         function palindromeTester($input_string)
         {
             $reversed_string = Palindrome::stringReverse($input_string);
-            return ($input_string == $reversed_string);
+            $regex_input_string = '//i';
+            $regex_reversed_string = '//i';
+            preg_match_all($regex_input_string, $input_string, $new_input_string);
+            preg_match_all($regex_reversed_string, $reversed_string, $new_reversed_string);
+            // echo $new_input_string;
+            // echo $new_reversed_string;
+            return ($new_input_string == $new_reversed_string);
 
         }
     }

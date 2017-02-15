@@ -18,7 +18,7 @@
         function test_palindromeTester_compare()
         {
             $test_newPalindrome = new Palindrome;
-            $input = "racecar";
+            $input = "Racecar";
 
             $result = $test_newPalindrome->palindromeTester($input);
 
